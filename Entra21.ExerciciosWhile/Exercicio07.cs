@@ -11,21 +11,17 @@ namespace Entra21.ExerciciosWhile
         public void Executar()
         {
             double quantidade = 0;
-            double total = 0;
-
             while (quantidade < 5)
+            {
+                Console.WriteLine("Nome do produto: ");
+                string nomeProduto = Console.ReadLine();
 
-            Console.WriteLine("Nome do produto: ");
-            string nomeProduto = Console.ReadLine();
+                Console.WriteLine("Valor: ");
+                double valor = Convert.ToDouble(Console.ReadLine());
 
-            Console.WriteLine("Valor: ");
-            double valor = Convert.ToDouble(Console.ReadLine());
-
-            Console.WriteLine("Quantidade: ");
-            quantidade = Convert.ToDouble(Console.ReadLine());
-
-
+                Console.WriteLine("Quantidade: ");
+                quantidade = Convert.ToDouble(Console.ReadLine());
+            }
         }
-
     }
 }
