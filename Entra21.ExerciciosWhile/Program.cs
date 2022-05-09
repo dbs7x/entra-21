@@ -11,53 +11,69 @@ Console.WriteLine(@"-----MENU-----
 8 - Exercicio 08
 9 - Exercicio 09
 10 - Exercicio 10
-11 - Exercicio 11");
+11 - Exercicio 11
+12 - Exercicio 12");
 
 Console.WriteLine("Digite a opção desejada: ");
 int opcaoDesejada = Convert.ToInt32(Console.ReadLine());
 
 if (opcaoDesejada == 1)
 {
-    Exercicio01 meuExemplo = new Exercicio01();
-    meuExemplo.Executar();
+    Exercicio01 exercicio01 = new Exercicio01();
+    exercicio01.Executar();
 }
 else if (opcaoDesejada == 2)
 {
-    Exercicio02 nossoExemplo = new Exercicio02();
-    nossoExemplo.Executar();
+    Exercicio02 exercicio02 = new Exercicio02();
+    exercicio02.Executar();
 }
 else if (opcaoDesejada == 3)
 {
-    Exercicio03 meuExemplo = new Exercicio03();
-    meuExemplo.Executar();
+    Exercicio03 exercicio03 = new Exercicio03();
+    exercicio03.Executar();
 }
 else if (opcaoDesejada == 4)
 {
-    Exercicio04 meuExemplo = new Exercicio04();
-    meuExemplo.Executar();
+    Exercicio04 exercicio04 = new Exercicio04();
+    exercicio04.Executar();
 }
 else if (opcaoDesejada == 5)
 {
-    Exercicio05 meuExemplo = new Exercicio05();
-    meuExemplo.Executar();
+    Exercicio05 exercicio05 = new Exercicio05();
+    exercicio05.Executar();
 }
 else if (opcaoDesejada == 6)
 {
-    Exercicio06 meuExemplo = new Exercicio06();
-    meuExemplo.Executar();
+    Exercicio06 exercicio06 = new Exercicio06();
+    exercicio06.Executar();
 }
 else if (opcaoDesejada == 7)
 {
-    Exercicio07 meuExemplo = new Exercicio07();
-    meuExemplo.Executar();
+    Exercicio07 exercicio07 = new Exercicio07();
+    exercicio07.Executar();
 }
 else if (opcaoDesejada == 8)
 {
-    Exercicio08 delesExemplo = new Exercicio08();
-    delesExemplo.Executar();
+    Exercicio08 exercicio08 = new Exercicio08();
+    exercicio08.Executar();
 }
-else if (opcaoDesejada == 9)
+else if (opcaoDesejada == 9) // Terminar
 {
-    Exercicio09 delesExemplo = new Exercicio09();
-    delesExemplo.Executar();
+    Exercicio09 exercicio09 = new Exercicio09();
+    exercicio09.Executar();
+}
+else if (opcaoDesejada == 10)
+{
+    Exercicio10 exercicio10 = new Exercicio10();
+    exercicio10.Executar();
+}
+else if (opcaoDesejada == 11)
+{
+    Exercicio11 exercicio11 = new Exercicio11();
+    exercicio11.Executar();
+}
+else if (opcaoDesejada == 12)
+{
+    Exercicio12 exercicio12 = new Exercicio12();
+    exercicio12.Executar();
 }
