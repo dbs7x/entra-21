@@ -10,12 +10,25 @@ namespace Entra21.ExerciciosWhile
     {
         public void Executar()
         {
-            double valor1 = 29.5;
-            double valor2 = 2;
-            double valor3 = 29.23;
+            int codigoPedido = 0;
 
-            while (codigo !=)
-            Console.WriteLine(@"Faça seu pedido, informe o código:
+            double totalPedido = 0;
+            double quantidadeProdutosConsumidos = 0;
+
+            //Valor produtos
+            double valorProduto1 = 29.5;
+            double valorProduto2 = 2;
+            double valorProduto3 = 29.23;
+
+            //Quantidade dos produtos escolhidos
+            int quantidadeBolos = 0;
+            int quantidadeDoces = 0;
+            int quantidadeSanduiches = 0;
+            int quantidadePizzas = 0;
+
+            while (codigoPedido != 16)
+            {
+                Console.WriteLine(@"
 -----------------------------------------------------------------------------
 |Código | Tipo       | Nome                                        | Valor  |
 -----------------------------------------------------------------------------
@@ -35,24 +48,34 @@ namespace Entra21.ExerciciosWhile
 |14     | Pizzas     | Peruana                                     | R$18,36|
 |15     | Pizzas     | Portuguesa                                  | R$27,50|
 |16     |            | Sair                                                 |
------------------------------------------------------------------------------");
-            int pedido = Convert.ToInt32(Console.ReadLine());
-            double totalPedido = 0;
-            double quantidadeProdutosConsumidos = 0;
+-----------------------------------------------------------------------------
+Faça seu pedido, informe o código: ");
+                codigoPedido = Convert.ToInt32(Console.ReadLine());
 
-            if (pedido == 1)
-            {
-                totalPedido = totalPedido + valor1;
+                if (codigoPedido == 1)
+                {
+                    totalPedido = totalPedido + valorProduto1;
+                    quantidadeBolos = quantidadeBolos + 1;
+                }
+                else if (codigoPedido == 2)
+                {
+                    totalPedido = totalPedido + valorProduto2;
+                    quantidadeBolos = quantidadeBolos + 1;
+                }
+                else if (codigoPedido == 3)
+                {
+                    totalPedido = totalPedido + valorProduto3;
+                    quantidadeBolos = quantidadeBolos + 1;
+                }
+                quantidadeProdutosConsumidos = quantidadeProdutosConsumidos + 1;
+
+                Console.WriteLine("Valor total do pedido: R$" + totalPedido);
+                Console.WriteLine("Quantidade total de produtos do pedido: " + quantidadeProdutosConsumidos);
+                Console.WriteLine("Quantidade de bolos escolhidos: " + quantidadeBolos);
+                Console.WriteLine("Quantidade de doces escolhidos: " + quantidadeDoces);
+                Console.WriteLine("Quantidade de sanduíches escolhidos: " + quantidadeSanduiches);
+                Console.WriteLine("Quantidade de pizzas escolhidas: " + quantidadePizzas);
             }
-            if (pedido == 2)
-            {
-                totalPedido = totalPedido + valor2;
-            }
-            if (pedido == 3)
-            {
-                totalPedido = totalPedido + valor3;
-            }
-            quantidadeProdutosConsumidos = quantidadeProdutosConsumidos + 1;
         }
     }
 }
