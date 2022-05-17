@@ -12,7 +12,7 @@ namespace Entra21.ExerciciosFor
         {
             var codigoPedido = 0;
             var totalPedido = 0.00;
-            var i = 0
+            var indice = 0;
 
             //Quantidade dos produtos escolhidos
             var quantidadeBolos = 0;
@@ -49,9 +49,9 @@ Faça seu pedido, informe o código: ");
                 codigoPedido = Convert.ToInt32(Console.ReadLine());
 
                 //Valor produtos
-                double valorProduto1 = 29.5;
-                double valorProduto2 = 2;
-                double valorProduto3 = 29.23;
+                var valorProduto1 = 29.50;
+                var valorProduto2 = 2.00;
+                var valorProduto3 = 29.23;
 
                 if (codigoPedido == 1)
                 {
