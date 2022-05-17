@@ -64,11 +64,6 @@ namespace Entra21.ExerciciosWhile
                     maiorAltura = altura;
                 }
 
-                else if ()
-                {
-
-                }
-
                 //Jogador com maior nome
 
             }

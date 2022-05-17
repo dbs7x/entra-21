@@ -4,25 +4,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Entra21.ExerciciosWhile
+namespace Entra21.ExerciciosFor
 {
     internal class Exercicio12
     {
         public void Executar()
         {
-            int codigoPedido = 0;
-            double totalPedido = 0;
-            double quantidadeProdutosConsumidos = 0;
+            var codigoPedido = 0;
+            var totalPedido = 0.00;
+            var i = 0
 
             //Quantidade dos produtos escolhidos
-            int quantidadeBolos = 0;
-            int quantidadeDoces = 0;
-            int quantidadeSanduiches = 0;
-            int quantidadePizzas = 0;
+            var quantidadeBolos = 0;
+            var quantidadeDoces = 0;
+            var quantidadeSanduiches = 0;
+            var quantidadePizzas = 0;
 
-            double mediaProdutos = 0;
+            var mediaProdutos = 0.00;
 
-            while (codigoPedido != 16)
+            for (int i = 0; i != 16; i++)
             {
                 Console.WriteLine(@"
 -----------------------------------------------------------------------------
@@ -68,15 +68,14 @@ Faça seu pedido, informe o código: ");
                     totalPedido = totalPedido + valorProduto3;
                     quantidadeBolos = quantidadeBolos + 1;
                 }
-                quantidadeProdutosConsumidos = quantidadeProdutosConsumidos + 1;
             }
             Console.WriteLine("Valor total do pedido: R$" + totalPedido);
-            Console.WriteLine("Quantidade total de produtos do pedido: " + quantidadeProdutosConsumidos);
+            Console.WriteLine("Quantidade total de produtos do pedido: " + i);
             Console.WriteLine("Quantidade de bolos escolhidos: " + quantidadeBolos);
             Console.WriteLine("Quantidade de doces escolhidos: " + quantidadeDoces);
             Console.WriteLine("Quantidade de sanduíches escolhidos: " + quantidadeSanduiches);
             Console.WriteLine("Quantidade de pizzas escolhidas: " + quantidadePizzas);
-            mediaProdutos = totalPedido / quantidadeProdutosConsumidos;
+            mediaProdutos = totalPedido / i;
             Console.WriteLine("Média dos produtos do pedido: R$" + mediaProdutos);
         }
     }
