@@ -17,7 +17,7 @@ namespace Entra21.ExerciciosFor
                 Console.WriteLine("Preço da peça: ");
                 precoPeca = Convert.ToDouble(Console.ReadLine());
                 Console.WriteLine("Nome da peça: ");
-                nomePeca = Console.ReadLine();
+                nomePeca = Console.ReadLine(); 
             }
         }
     }
