@@ -4,7 +4,9 @@ Console.WriteLine(@"--MENU--
 1 - Exercício 01
 5 - Exercício 05
 8 - Exercício 08
-
+10 - Exercício 10
+12 - Exercício 12
+13 - Exercício 13
 ");
 
 Console.WriteLine("Digite a opção desejada: ");
@@ -24,6 +26,11 @@ if (opcaoDesejada == 8)
 {
     Exercicio08 exercicio08 = new Exercicio08();
     exercicio08.Executar();
+}
+if (opcaoDesejada == 10)
+{
+    Exercicio10 exercicio10 = new Exercicio10();
+    exercicio10.Executar();
 }
 if (opcaoDesejada == 12)
 {

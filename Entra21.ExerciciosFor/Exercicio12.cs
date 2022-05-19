@@ -70,12 +70,12 @@ Faça seu pedido, informe o código: ");
                 }
             }
             Console.WriteLine("Valor total do pedido: R$" + totalPedido);
-            Console.WriteLine("Quantidade total de produtos do pedido: " + i);
+            Console.WriteLine("Quantidade total de produtos do pedido: " + indice);
             Console.WriteLine("Quantidade de bolos escolhidos: " + quantidadeBolos);
             Console.WriteLine("Quantidade de doces escolhidos: " + quantidadeDoces);
             Console.WriteLine("Quantidade de sanduíches escolhidos: " + quantidadeSanduiches);
             Console.WriteLine("Quantidade de pizzas escolhidas: " + quantidadePizzas);
-            mediaProdutos = totalPedido / i;
+            mediaProdutos = totalPedido / indice;
             Console.WriteLine("Média dos produtos do pedido: R$" + mediaProdutos);
         }
     }

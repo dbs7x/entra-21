@@ -24,33 +24,79 @@ namespace Entra21.ExerciciosFor
             var valorTotalCarros = 0.00;
             var carrosLetraG = 0;
             var carrosLetraA = 0;
-            var mediaAnoCarros = 0;
-            var mediaValorCarros = 0.00;
 
-            Console.WriteLine("Quantidade de carros que deseja cadastrar: ");
-            quantidadeCarros = Convert.ToInt32(Console.ReadLine());
+            while ((quantidadeCarros <= 0) || (quantidadeCarros > 100))
+            {
+                try
+                {
+                    Console.WriteLine("Quantidade de carros que deseja cadastrar: ");
+                    quantidadeCarros = Convert.ToInt32(Console.ReadLine());
+                    if (quantidadeCarros < 0)
+                    {
+                        Console.WriteLine("A quantidade de carros deve ser maior que zero");
+                    }
+                    else if (quantidadeCarros > 100)
+                    {
+                        Console.WriteLine("A quantidade de carros deve ser menor que 100");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("O número informado deve ser um número inteiro");
+                }
+            }
 
             for (int i = 0; i < quantidadeCarros; i++)
             {
-                Console.WriteLine("Modelo: ");
-                var modeloCarro = Console.ReadLine().ToLower().Trim();
+                var modeloCarro = "";
+                while ((modeloCarro.Trim().Length <= 0) || (modeloCarro.Trim().Length >= 2))
+                {
+                    Console.WriteLine("Modelo: ");
+                    modeloCarro = Console.ReadLine().ToLower().Trim();
+                    if (modeloCarro.Trim().Length <= 0)
+                    {
+                        Console.WriteLine("Informe o modelo do carro");
+                    }
+                    else if (modeloCarro.Trim().Length >= 2)
+                    {
+                        Console.WriteLine("O modelo do carro deve conter menos que 100 caracteres");
+                    }
+                }
                 if (modeloCarro.StartsWith("g"))
                 {
-                    carrosLetraG = carrosLetraG + 1;
+                    carrosLetraG++;
                 }
                 if (modeloCarro.StartsWith("a"))
                 {
-                    carrosLetraA = carrosLetraA + 1;
+                        carrosLetraA++;
                 }
-                Console.WriteLine("Valor: R$");
-                var valorCarro = Convert.ToDouble(Console.ReadLine());
+
+                var valorCarro = 0.00;
+                while (valorCarro <= 0)
+                {
+                    try
+                    {
+                        Console.WriteLine("Valor: R$");
+                        valorCarro = Convert.ToDouble(Console.ReadLine());
+                        if (valorCarro <= 0)
+                        {
+                            Console.WriteLine("Valor inválido, informe um número positivo");
+                        }
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Valor inválido");
+                    }
+                }
                 valorTotalCarros = valorTotalCarros + valorCarro;
+
+                var anoCarro = 0;
                 Console.WriteLine("Ano: ");
-                var anoCarro = Convert.ToInt32(Console.ReadLine());
+                anoCarro = Convert.ToInt32(Console.ReadLine());
                 anoTotalCarros = anoTotalCarros + anoCarro;
             }
-            mediaAnoCarros = anoTotalCarros / quantidadeCarros;
-            mediaValorCarros = valorTotalCarros / quantidadeCarros;
+            var mediaAnoCarros = anoTotalCarros / quantidadeCarros;
+            var mediaValorCarros = valorTotalCarros / quantidadeCarros;
             Console.WriteLine("Média do ano dos carros: " + mediaAnoCarros);
             Console.WriteLine("Média do valor dos carros: " + mediaValorCarros); ;
             Console.WriteLine("Quantidade de carros que começam com a letra G: " + carrosLetraG);
