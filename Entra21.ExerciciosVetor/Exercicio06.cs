@@ -19,6 +19,7 @@ namespace Entra21.ExerciciosVetor
                 Console.WriteLine("Idade: ");
                 idades [i] = Convert.ToInt32(Console.ReadLine());
             }
+
             var maiorIdade = int.MinValue;
             for (int i = 0;i < idades.Length;i++)
             {
@@ -27,6 +28,7 @@ namespace Entra21.ExerciciosVetor
                     maiorIdade = idades [i];
                 }
             }
+
             Console.WriteLine("A pessoa com maior idade tem " + maiorIdade + " anos");
         }
     }

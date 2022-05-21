@@ -12,8 +12,8 @@ namespace Entra21.ExerciciosVetor
         {
             //Crie um vetor para guardar 10 nomes e apresente os dez nomes
 
-            var quantidade = 2;
-            var nomes = new string [quantidade];
+            var quantidade = 10;
+            var nomes = new string[quantidade];
             for (int i = 0; i < nomes.Length; i++)
             {
                 Console.WriteLine("Nome: ");
@@ -21,7 +21,7 @@ namespace Entra21.ExerciciosVetor
             }
 
             Console.Clear();
-            for (int i = 0;i < nomes.Length;i++)
+            for (int i = 0; i < nomes.Length; i++)
             {
                 Console.WriteLine(nomes[i]);
             }

@@ -12,7 +12,7 @@ namespace Entra21.ExerciciosVetor
         {
             //Crie um vetor para guardar 16 números inteiros, preencha todas as posições com números e apresente a soma destes números
 
-            var quantidade = 3;
+            var quantidade = 16;
             var numeros = new int[quantidade];
             var soma = 0;
             for (int i = 0; i < numeros.Length; i++)

@@ -15,17 +15,18 @@ namespace Entra21.ExerciciosVetor
             Solicite para o usuário o nome e as quatro notas, armazenando as notas em um vetor, realize a média destas notas e apresente*/
 
             var quantidade = 4;
-            var notas = new double [quantidade];
+            var notas = new double[quantidade];
             var soma = 0.00;
-            var nome = "";
-            Console.WriteLine("Informe o nome: ");
-            nome = Console.ReadLine();
+            Console.WriteLine("Nome: ");
+            var nome = Console.ReadLine();
             for (int i = 0; i < notas.Length; i++)
             {
                 Console.WriteLine("Nota: ");
                 notas[i] = Convert.ToDouble(Console.ReadLine());
-                soma = soma + notas [i];
+                soma = soma + notas[i];
             }
+
+            Console.Clear();
             var media = soma / notas.Length;
             Console.WriteLine("A nota média de " + nome + " é: " + media);
         }
