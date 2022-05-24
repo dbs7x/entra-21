@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosWhile", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosFor", "Entra21.ExerciciosFor\Entra21.ExerciciosFor.csproj", "{D7E85505-4B1A-4005-BEE4-0B864B5D29AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExerciciosVetor", "Entra21.ExerciciosVetor\Entra21.ExerciciosVetor.csproj", "{DFE2B2BA-9A5C-40BC-860E-59AA73DDFE68}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Entra21.ExerciciosVetor", "Entra21.ExerciciosVetor\Entra21.ExerciciosVetor.csproj", "{DFE2B2BA-9A5C-40BC-860E-59AA73DDFE68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entra21.ExerciciosVetorComplementar", "Entra21.ExerciciosVetorComplementar\Entra21.ExerciciosVetorComplementar.csproj", "{4ECB0838-2D35-45B5-8533-338083697318}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{DFE2B2BA-9A5C-40BC-860E-59AA73DDFE68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFE2B2BA-9A5C-40BC-860E-59AA73DDFE68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFE2B2BA-9A5C-40BC-860E-59AA73DDFE68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ECB0838-2D35-45B5-8533-338083697318}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ECB0838-2D35-45B5-8533-338083697318}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ECB0838-2D35-45B5-8533-338083697318}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ECB0838-2D35-45B5-8533-338083697318}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
