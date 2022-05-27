@@ -34,16 +34,17 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio01
 
         public void ApresentarTituloAutor()
         {
-            Console.WriteLine(Titulo + " " + Autor);
+            Console.Write("Título: " + Titulo + " - " + "Autor: " + Autor);
         }
 
         public void ApresentarQuantidadePaginasParaLer()
         {
-            Console.WriteLine(QuantidadePaginas);
+            Console.Write("Quantidade de páginas para ler: " + (QuantidadePaginas - QuantidadePaginasLidas));
         }
 
-
-
-
+        public void ApresentarQuantidadePaginasLidasNoTotal()
+        {
+            Console.Write("Quantidade total de páginas lidas: " + QuantidadePaginas * QuantidadeReleituras);
+        }
     }
 }
