@@ -17,11 +17,14 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio01
         - Quantidade de páginas
         - Quantidade de páginas lidas
         - Quantidade de releituras
+
         Crie os seguintes métodos:
         - ApresentarTituloAutor
         - ApresentarQuantidadePaginasParaLer
         - ApresentarQuantidadePaginasLidasNoTotal
-        Criar testes unitários validando os métodos criados acima*/
+        - ApresentarQuantidadeAnosAposPublicação
+        Criar classe de ExercicioLivro que instancie o livro e atribua valor para suas propriedades,
+        assim como chamar os métodos.*/
 
         public string Titulo;
         public string Autor;
@@ -34,17 +37,22 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio01
 
         public void ApresentarTituloAutor()
         {
-            Console.Write("Título: " + Titulo + " - " + "Autor: " + Autor);
+            Console.Write("Título: " + Titulo + "\nAutor: " + Autor);
         }
 
         public void ApresentarQuantidadePaginasParaLer()
         {
-            Console.Write("Quantidade de páginas para ler: " + (QuantidadePaginas - QuantidadePaginasLidas));
+            Console.WriteLine("Quantidade de páginas para ler: " + (QuantidadePaginas - QuantidadePaginasLidas));
         }
 
         public void ApresentarQuantidadePaginasLidasNoTotal()
         {
-            Console.Write("Quantidade total de páginas lidas: " + QuantidadePaginas * QuantidadeReleituras);
+            Console.WriteLine("Quantidade total de páginas lidas: " + (QuantidadePaginasLidas * QuantidadeReleituras));
+        }
+
+        public void ApresentarQuantidadeAnosAposPublicação()
+        {
+            Console.WriteLine("Quantidade de anos após publicação: " + (DateTime.Now.Year - DataLancamento.Year));
         }
     }
 }
