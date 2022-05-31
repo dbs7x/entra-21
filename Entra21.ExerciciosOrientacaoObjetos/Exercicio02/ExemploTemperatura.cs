@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio02
 {
-    internal class ExemploTemperatura
+    public class ExemploTemperatura
     {
         public void Executar()
         {
@@ -15,7 +15,7 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio02
             temperatura.TemperaturaDestino = "kelvin";
             temperatura.TemperaturaValor = 30;
 
-            temperatura.Conversor();
+            Console.WriteLine("Temperatura convertida: " + temperatura.ObterTemperaturaConvertida());
         }
     }
 }

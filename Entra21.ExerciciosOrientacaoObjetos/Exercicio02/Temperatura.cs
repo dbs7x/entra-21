@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio02
 {
-    internal class Temperatura
+    public class Temperatura
     {
         /*Criar uma classe chamada Temperatura, armazenar as seguintes propriedades:
         - Temperatura de origem
@@ -33,56 +33,85 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio02
         Temperatura convertida: 108,14
         Obs.: Criar testes unitários, assim como, ExercicioTemperatura.*/
 
-        public string TemperaturaOrigem;
-        public string TemperaturaDestino;
+        public string TemperaturaOrigem, TemperaturaDestino;
         public double TemperaturaValor;
 
-        public void CalcularCelsiusParaKelvin()
+        public double CelsiusParaKelvin()
         {
-            TemperaturaValor = TemperaturaValor + 273.15;
-            Console.WriteLine("Temperatura convertida de graus celsius para kelvin: " + TemperaturaValor);
+            var calculoCelsiusParaKelvin = TemperaturaValor + 273.15;
+
+            return calculoCelsiusParaKelvin;
         }
 
-        public void CelsiusParaFahrenheit()
+        public double CelsiusParaFahrenheit()
         {
-            TemperaturaValor = TemperaturaValor * 1.8 + 32;
-            Console.WriteLine("Temperatura convertida de graus celsius para fahrenheit: " + TemperaturaValor);
+            var calculoCelsiusParaFahrenheit = TemperaturaValor * 1.8 + 32;
+
+            return calculoCelsiusParaFahrenheit;
         }
-        public void KelvinParaCelsius()
+        public double KelvinParaCelsius()
         {
-            TemperaturaValor = TemperaturaValor - 273.15;
-            Console.WriteLine("Temperatura convertida de graus kelvin para celsius: " + TemperaturaValor);
+            var calculoKelvinParaCelsius = TemperaturaValor - 273.15;
+
+            return calculoKelvinParaCelsius;
         }
 
-        public void KelvinParaFahrenheit()
+        public double KelvinParaFahrenheit()
         {
-            TemperaturaValor = 1.8 * (TemperaturaValor - 273.15) + 32;
-            Console.WriteLine("Temperatura convertida de graus kelvin para fahrenheit: " + TemperaturaValor);
+            var calculoKelvinParaFahrenheit = 1.8 * (TemperaturaValor - 273.15) + 32;
+
+            return calculoKelvinParaFahrenheit;
         }
 
-        public void FahrenheitParaCelsius()
+        public double FahrenheitParaCelsius()
         {
-            TemperaturaValor = (TemperaturaValor - 32) / 1.8;
-            Console.WriteLine("Temperatura convertida de graus fahrenheit para celsius: " + TemperaturaValor);
+            var calculoFahrenheitParaCelsius = (TemperaturaValor - 32) / 1.8;
+
+            return calculoFahrenheitParaCelsius;
         }
 
-        public void FahrenheitParaKelvin()
+        public double FahrenheitParaKelvin()
         {
-            TemperaturaValor = (TemperaturaValor + 459.67) * 5 / 9;
-            Console.WriteLine("Temperatura convertida de graus fahrenheit para kelvin: " + TemperaturaValor);
+            var calculoFahrenheitParaKelvin = (TemperaturaValor + 459.67) * 5 / 9;
+
+            return calculoFahrenheitParaKelvin;
         }
 
-        public void Conversor()
+        public double ObterTemperaturaConvertida()
         {
+
+            var temperaturaConvertida = 0.00;
             if (TemperaturaOrigem == "celsius" && TemperaturaDestino == "kelvin")
             {
-                CalcularCelsiusParaKelvin();
+                temperaturaConvertida = CelsiusParaKelvin();
             }
 
-            else
+            else if (TemperaturaOrigem == "celsius" && TemperaturaDestino == "fahrenheit")
             {
-                Console.WriteLine("Temperatura de origem ou destina inválida");
+                temperaturaConvertida = CelsiusParaFahrenheit();
             }
+
+            else if (TemperaturaOrigem == "kelvin" && TemperaturaDestino == "celsius")
+            {
+                temperaturaConvertida = KelvinParaCelsius();
+            }
+
+            else if (TemperaturaOrigem == "kelvin" && TemperaturaDestino == "fahrenheit")
+            {
+                temperaturaConvertida = KelvinParaFahrenheit();
+            }
+
+            else if (TemperaturaOrigem == "fahrenheit" && TemperaturaDestino == "celsius")
+            {
+                temperaturaConvertida = FahrenheitParaCelsius();
+            }
+
+            else if (TemperaturaOrigem == "fahrenheit" && TemperaturaDestino == "kelvin")
+            {
+                temperaturaConvertida = FahrenheitParaKelvin();
+            }
+
+            return temperaturaConvertida;
         }
     }
 }
