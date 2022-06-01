@@ -49,6 +49,7 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Exercicio02
 
             return calculoCelsiusParaFahrenheit;
         }
+
         public double KelvinParaCelsius()
         {
             var calculoKelvinParaCelsius = TemperaturaValor - 273.15;

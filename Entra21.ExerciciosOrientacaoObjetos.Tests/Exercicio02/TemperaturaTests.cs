@@ -11,20 +11,55 @@ namespace Entra21.ExerciciosOrientacaoObjetos.Tests
 {
     public class TemperaturaTests
     {
-        [Fact]
-        public void ValidarCelsiusParaKelvin()
+        //[Fact]
+        //public void ValidarCelsiusParaKelvin()
+        //{
+        //    //Arrange
+        //    var temperatura = new Temperatura();
+        //    temperatura.TemperaturaOrigem = "celsius";
+        //    temperatura.TemperaturaDestino = "kelvin";
+        //    temperatura.TemperaturaValor = 30;
+
+        //    //Act
+        //    var calculoCelsiusParaKelvin = temperatura.ObterTemperaturaConvertida();
+
+        //    //Assert
+        //    calculoCelsiusParaKelvin.Should().Be(303.15);
+        //}
+
+        //[Fact]
+        //public void ValidarCelsiusParaFahrenheit()
+        //{
+        //    //Arrange
+        //    var temperatura = new Temperatura();
+        //    temperatura.TemperaturaOrigem = "celsius";
+        //    temperatura.TemperaturaDestino = "fahrenheit";
+        //    temperatura.TemperaturaValor = 30;
+
+        //    //Act
+        //    var calculoCelsiusParaFahrenheit = temperatura.ObterTemperaturaConvertida();
+
+        //    //Assert
+        //    calculoCelsiusParaFahrenheit.Should().Be(86);
+        //}
+        [Theory]
+        [InlineData("celsius", "kelvin", 30, 303.15)]
+
+        public void ValidarTemperaturaConvertida(string temperaturaOrigem, string temperaturaDestino, double temperaturaValor, double temperaturaEsperada)
         {
-            //Arrange
+            //Arrenge
             var temperatura = new Temperatura();
-            temperatura.TemperaturaOrigem = "celsius";
-            temperatura.TemperaturaDestino = "kelvin";
-            temperatura.TemperaturaValor = 30;
+            temperatura.TemperaturaOrigem = temperaturaOrigem;
+            temperatura.TemperaturaDestino = temperaturaDestino;
+            temperatura.TemperaturaValor = temperaturaValor;
 
             //Act
-            var calculoCelsiusParaKelvin = temperatura.CelsiusParaKelvin();
+            var calculoConversao = temperatura.ObterTemperaturaConvertida();
 
             //Assert
-            calculoCelsiusParaKelvin.Should().Be(303.15);
+            calculoConversao.Should().Be(temperaturaEsperada);
+
         }
+
     }
 }
